@@ -1,6 +1,13 @@
 #include "db.h"
 
 int db_display() {
+    FILE *file=fopen("movie.csv", "r");
+    int c;
+    while ((c=fgetc(file))!=EOF)
+        {
+        putchar(c);
+        }
+    fclose(file);
     return 0;
 }
 
